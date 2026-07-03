@@ -1,0 +1,19 @@
+{
+  "HOME": {
+    "TITLE": "Práctica de i18n",
+    "SUBTITLE": "Internacionalización en Ionic & Angular",
+    "DESCRIPTION": "Esta aplicación demuestra cómo implementar un sistema dinámico de cambio de idioma utilizando componentes standalone, @ngx-translate y el nuevo flujo de control de Angular.",
+    "SELECT_LANG": "Seleccionar Idioma",
+    "LANG_SPANISH": "Español",
+    "LANG_ENGLISH": "Inglés",
+    "BUTTON_SAVE": "Guardar Configuración",
+    "BUTTON_RESET": "Restablecer",
+    "BUTTON_INFO": "Más Información",
+    "FEATURE_TITLE": "Características Evaluadas en esta Práctica:",
+    "FEATURE_1": "Uso de Componentes Standalone (Sin IonicModule)",
+    "FEATURE_2": "Carga asíncrona de archivos JSON vía HttpClient",
+    "FEATURE_3": "Control de flujo moderno de Angular (@if, @for)",
+    "FEATURE_4": "Cambio de idioma reactivo en tiempo real",
+    "SELECTED_LANG_MSG": "Has seleccionado el idioma: Español."
+  }
+}

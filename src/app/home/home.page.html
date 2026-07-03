@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{ 'HOME.TITLE' | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="home-container">
+    <div class="premium-card">
+      <!-- Encabezado de la Tarjeta -->
+      <h1 class="premium-title">{{ 'HOME.TITLE' | translate }}</h1>
+      <h2 class="premium-subtitle">{{ 'HOME.SUBTITLE' | translate }}</h2>
+      
+      <!-- Descripción de la Práctica -->
+      <p class="premium-description">
+        {{ 'HOME.DESCRIPTION' | translate }}
+      </p>
+
+      <!-- Selector de Idioma -->
+      <div class="selector-container">
+        <span class="selector-label">{{ 'HOME.SELECT_LANG' | translate }}</span>
+        <ion-list lines="none">
+          <ion-item class="language-selector-item">
+            <ion-select 
+              [value]="translate.currentLang()" 
+              (ionChange)="changeLanguage($event)"
+              interface="popover">
+              @for (lang of availableLanguages; track lang.code) {
+                <ion-select-option [value]="lang.code">
+                  {{ lang.labelKey | translate }}
+                </ion-select-option>
+              }
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <!-- Lista de Características (Uso de @for) -->
+      <div class="features-section">
+        <h3 class="features-title">{{ 'HOME.FEATURE_TITLE' | translate }}</h3>
+        <ul class="features-list">
+          @for (key of featuresKeys; track key) {
+            <li class="feature-item">{{ key | translate }}</li>
+          }
+        </ul>
+      </div>
+
+      <!-- Mensaje Condicional Basado en Idioma (Uso de @if / @else leyendo el Signal) -->
+      @if (translate.currentLang() === 'es') {
+        <div class="lang-msg-container">
+          <p>🇪🇸 {{ 'HOME.SELECTED_LANG_MSG' | translate }}</p>
+        </div>
+      } @else {
+        <div class="lang-msg-container">
+          <p>🇬🇧 {{ 'HOME.SELECTED_LANG_MSG' | translate }}</p>
+        </div>
+      }
+
+      <!-- Botones de Acción -->
+      <div class="button-container">
+        <ion-button expand="block" class="btn-primary">
+          {{ 'HOME.BUTTON_SAVE' | translate }}
+        </ion-button>
+        <ion-button expand="block" fill="clear" class="btn-secondary">
+          {{ 'HOME.BUTTON_RESET' | translate }}
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,19 @@
+{
+  "HOME": {
+    "TITLE": "i18n Practice",
+    "SUBTITLE": "Internationalization in Ionic & Angular",
+    "DESCRIPTION": "This application demonstrates how to implement a dynamic language switcher using standalone components, @ngx-translate, and the new Angular control flow.",
+    "SELECT_LANG": "Select Language",
+    "LANG_SPANISH": "Spanish",
+    "LANG_ENGLISH": "English",
+    "BUTTON_SAVE": "Save Settings",
+    "BUTTON_RESET": "Reset",
+    "BUTTON_INFO": "More Info",
+    "FEATURE_TITLE": "Features Evaluated in this Practice:",
+    "FEATURE_1": "Use of Standalone Components (No IonicModule)",
+    "FEATURE_2": "Asynchronous loading of JSON files via HttpClient",
+    "FEATURE_3": "Modern Angular control flow (@if, @for)",
+    "FEATURE_4": "Reactive real-time language switching",
+    "SELECTED_LANG_MSG": "You have selected the language: English."
+  }
+}
